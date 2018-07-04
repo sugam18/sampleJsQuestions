@@ -1,0 +1,122 @@
+
+<mat-accordion class="center">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+             <b>Question 1 : </b>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p class="question">Write a JS code. Given an array of integers, find the closest value to the given number. The array may contain duplicate values and negative numbers. (Example : Array : 2,5,8,8,9,6,7,3 Target number : 5 Output : 5)(Target number : 11 Output : 9)(Target Number : 4 Output : 5)</p>
+      
+          <button mat-button class="ansBtn" (click)="getAnswer1()">Find Answer</button>
+          {{result}} &nbsp;
+          <button mat-button class="showBtn" *ngIf="showAnswer1Btn" (click)="viewAnswer1()">{{b1}} Code</button> <br>
+          <mat-card *ngIf="showAnswer1">
+              <p>
+                <kbd>    public getAnswer1() {{ "{" }}</kbd><br>
+                <kbd>           var arr = [ 2,5,8,8,9,6,7,3];</kbd><br>
+                <kbd>            arr.sort();</kbd><br>
+                <kbd>           var target = [5,11,4];</kbd><br>
+                <kbd>            for (var i=0; i < target.length; i++) {{ "{" }}</kbd><br>
+                <kbd>            var c = target[i];</kbd><br>
+                <kbd>            if(arr.includes(target[i])) {{ "{" }}</kbd><br>
+                <kbd>            this.result = target[i];</kbd><br>
+                <kbd>            {{ "}" }}</kbd><br>
+                <kbd>            else if(arr[0] >= c) {{ "{" }}</kbd><br>
+                <kbd>            this.result = arr[0];</kbd><br>
+                <kbd>            {{ "}" }}</kbd><br>
+                <kbd>            else if(arr[arr.length-1] < = c) {{ "{" }}</kbd><br>
+                <kbd>				this.result = arr[arr.length-1];</kbd><br>
+                <kbd>            {{ "}" }}</kbd><br>
+                <kbd>            else {{ "{" }}</kbd><br>
+                <kbd>                var j =0;</kbd><br>
+                <kbd>                while(arr[j] < =c)</kbd><br>
+                <kbd>				{{ "{" }}</kbd><br>
+                <kbd>					j++;</kbd><br>
+                <kbd>				{{ "}" }}</kbd><br>
+                <kbd>           var ldiff=c-arr[j-1];</kbd><br>
+                <kbd>            var udiff=arr[j]-c;</kbd><br>
+                <kbd>            if(ldiff < udiff) {{ "{" }}</kbd><br>
+                <kbd>                this.result = arr[j-1];</kbd><br>
+                <kbd>           {{ "}" }}</kbd><br>
+                <kbd>            else {{ "{"}}</kbd><br>
+                <kbd>                this.result = arr[j];</kbd><br>
+                <kbd>            {{ "}" }}</kbd><br>
+                <kbd>	    {{ "}" }}</kbd><br>
+                <kbd>    {{ "}" }}</kbd><br>
+                <kbd>    this.showAnswer1Btn = true;</kbd><br>
+                <kbd>{{ "}" }}</kbd><br>                   
+                  </p>
+          </mat-card>
+        </mat-expansion-panel>
+
+
+
+
+
+
+
+
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                    <mat-panel-title>
+                          <b>Question 2 : </b>
+                    </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="question">Write a JS code for finding the maximum repeated string in an array (e.g. var arr = [ “and”,”I”,”and”,”am”,”and “ I”,”and”])</p>
+                                <button mat-button class="ansBtn" (click)="getAnswer2()">Find Answer</button>
+                                {{part2}} &nbsp;
+                                <button mat-button class="showBtn" *ngIf="showAnswer2Btn" (click)="viewAnswer2()">{{b2}} Code</button> <br>
+                                <mat-card *ngIf="showAnswer2">
+                                    <p>
+                                        <kbd>public getAnswer2() {{ "{" }}</kbd><br>
+                                          <kbd>	var first = 0;</kbd><br>
+                                          <kbd>	var second = 1;</kbd><br>
+                                          <kbd>	var total = 0;</kbd><br>
+                                          <kbd>	this.part1 = first+" "+second;</kbd><br>
+                                          <kbd>	&nbsp;for(var i = 2; ; i++){{ "{" }}</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;total = first + second;</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;if(total > this.maxLimit)</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;break;</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;first = second;</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;second  = total;</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;this.part1+=" "+total;</kbd><br>
+                                          <kbd>	&nbsp;{{ "}" }}</kbd><br>
+                                          <kbd>	{{ "}" }}</kbd><br>                    
+                                        </p>
+                                </mat-card>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                    <mat-panel-title>
+                          <b>Question 3 : </b>
+                    </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="question">Write a JS code which will print Fibonacci series where End value is not greater than 33. (e.g. 0112358)</p>
+                                <button mat-button class="ansBtn" (click)="getAnswer3()">Find Answer</button>
+                                {{max}} &nbsp;
+                                <button class="showBtn" mat-button *ngIf="showAnswer3Btn" (click)="viewAnswer3()">{{b3}} Code</button> <br>
+                                <mat-card *ngIf="showAnswer3">
+                                    <p>
+                                        <kbd>public getAnswer3() {{ "{" }}</kbd><br>
+                                          <kbd>	var arr = ['and','I','and','am','and', 'I','and'];</kbd><br>
+                                          <kbd>	var dummy;</kbd><br>
+                                          <kbd>	this.max = 0;</kbd><br>
+                                          <kbd>	for(var i =0;i < arr.length;i++){{ "{" }} </kbd><br>
+                                          <kbd>	&nbsp;dummy = 0;</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;for (var j=i;j < arr.length;j++) {{ "{" }}</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;if (arr[i] === arr[j]) {{ "{" }}</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;dummy++;</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;{{ "}" }}</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;{{ "}" }}</kbd><br>
+                                          <kbd>	&nbsp;&nbsp;if (dummy > this.max) {{ "{" }} this.max = dummy;{{ "}" }}</kbd><br>
+                                          <kbd>	&nbsp;{{ "}" }}</kbd><br>
+										                      <kbd>this.showAnswer3Btn = true;</kbd><br>
+                                          <kbd>	{{ "}" }}</kbd><br>                    
+                                        </p>
+                                </mat-card>
+        </mat-expansion-panel>
+      </mat-accordion>
+      

@@ -1,0 +1,13 @@
+.center {
+    width:50%;
+}
+.showBtn { 
+    background-color: #7fe8cf;
+}
+.ansBtn {
+    background-color: #68acff;
+}
+.question {
+    color: red;
+    font-weight: bold;
+}
